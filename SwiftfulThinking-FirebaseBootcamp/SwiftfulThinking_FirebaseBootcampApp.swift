@@ -16,7 +16,7 @@ struct SwiftfulThinking_FirebaseBootcampApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack{
-                AuthView()
+                RootView()
             }
         }
     }
