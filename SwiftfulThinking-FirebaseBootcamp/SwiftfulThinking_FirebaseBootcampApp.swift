@@ -15,7 +15,9 @@ struct SwiftfulThinking_FirebaseBootcampApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack{
+                AuthView()
+            }
         }
     }
 }
@@ -24,7 +26,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
-    print("FirebaseApp Configure")
     return true
   }
 }
