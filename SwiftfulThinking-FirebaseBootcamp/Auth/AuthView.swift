@@ -6,9 +6,24 @@
 //
 
 import SwiftUI
+import GoogleSignIn
+import GoogleSignInSwift
+ 
+@MainActor
+final class AuthViewModel:ObservableObject{
+    
+    func signInGoogle() async throws{
+        let helper = SignInGoogleHelper()
+        let tokens = try await helper.signIn()
+        
+        try await AuthManager.shared.signInWithGoogle(tokens: tokens)
+    }
+    
+}
 
 struct AuthView: View {
     
+    @StateObject private var viewModel = AuthViewModel()
     @Binding var showSignInView: Bool
     
     var body: some View {
@@ -24,6 +39,18 @@ struct AuthView: View {
                     .background(Color.blue)
                     .cornerRadius(10)
             }
+            
+            GoogleSignInButton(viewModel: GoogleSignInButtonViewModel(scheme:.dark,style: .wide,state:.normal)){
+                Task{
+                    do{
+                        try await viewModel.signInGoogle()
+                        showSignInView = false
+                    }catch{
+                        print(error)
+                    }
+                }
+            }
+            
             Spacer()
         }
         .padding()
