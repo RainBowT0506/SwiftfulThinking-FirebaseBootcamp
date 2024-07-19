@@ -23,6 +23,7 @@
 		A6B4D87D2C48E9A900DDECD5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A6B4D87C2C48E9A900DDECD5 /* FirebaseAuth */; };
 		A6B4D8822C48EECA00DDECD5 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B4D8812C48EECA00DDECD5 /* AuthView.swift */; };
 		A6B4D8842C48F39500DDECD5 /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B4D8832C48F39500DDECD5 /* SignInEmailView.swift */; };
+		A6C821A12C4ADB67001BEB8E /* SignInAppleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C821A02C4ADB67001BEB8E /* SignInAppleHelper.swift */; };
 		A6E1F1C12C4A0157005E207B /* SignInGoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E1F1C02C4A0157005E207B /* SignInGoogleHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,9 @@
 		A6B4D8742C48C41400DDECD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A6B4D8812C48EECA00DDECD5 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		A6B4D8832C48F39500DDECD5 /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
+		A6C821982C4A4EB6001BEB8E /* SwiftfulThinking-FirebaseBootcamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwiftfulThinking-FirebaseBootcamp.entitlements"; sourceTree = "<group>"; };
+		A6C821992C4A5889001BEB8E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		A6C821A02C4ADB67001BEB8E /* SignInAppleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleHelper.swift; sourceTree = "<group>"; };
 		A6E1F1C02C4A0157005E207B /* SignInGoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,7 @@
 		A6B4D8652C48C03B00DDECD5 /* SwiftfulThinking-FirebaseBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				A6C821982C4A4EB6001BEB8E /* SwiftfulThinking-FirebaseBootcamp.entitlements */,
 				A68EA4632C4961920007801A /* Utilities */,
 				A68EA4612C495FC00007801A /* Info.plist */,
 				A6B4D87E2C48EE8300DDECD5 /* Auth */,
@@ -110,6 +115,7 @@
 		A6B4D87B2C48E9A900DDECD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6C821992C4A5889001BEB8E /* AuthenticationServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +129,7 @@
 				A68EA4522C4903710007801A /* RootView.swift */,
 				A68EA4542C4907C00007801A /* SettingsView.swift */,
 				A6E1F1C02C4A0157005E207B /* SignInGoogleHelper.swift */,
+				A6C821A02C4ADB67001BEB8E /* SignInAppleHelper.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -217,6 +224,7 @@
 				A6B4D8822C48EECA00DDECD5 /* AuthView.swift in Sources */,
 				A6B4D8842C48F39500DDECD5 /* SignInEmailView.swift in Sources */,
 				A68EA4652C4961AB0007801A /* Utilities.swift in Sources */,
+				A6C821A12C4ADB67001BEB8E /* SignInAppleHelper.swift in Sources */,
 				A6004AED2C48FD56004D349A /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,9 +356,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SwiftfulThinking-FirebaseBootcamp/SwiftfulThinking-FirebaseBootcamp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftfulThinking-FirebaseBootcamp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SwiftfulThinking-FirebaseBootcamp/Info.plist";
@@ -377,9 +387,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SwiftfulThinking-FirebaseBootcamp/SwiftfulThinking-FirebaseBootcamp.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftfulThinking-FirebaseBootcamp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SwiftfulThinking-FirebaseBootcamp/Info.plist";
